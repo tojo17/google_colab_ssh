@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# there should already be frpchome.ini and authorized_keys files here
+# there should already be frpc.ini and authorized_keys files here
 # usage: bash colab_init.sh <password_of_new_user>
 
 # make new user
@@ -28,10 +28,10 @@ echo "### downloading frp"
 wget -q --show-progress -c https://github.com/fatedier/frp/releases/download/v0.25.2/frp_0.25.2_linux_amd64.tar.gz
 tar xzf frp_0.25.2_linux_amd64.tar.gz -C /opt/
 mv /opt/frp_0.25.2_linux_amd64 /opt/frp
-mv frpchome.ini /opt/frp/frpchome.ini
+mv frpc.ini /opt/frp/frpc.ini
 chmod -R 755 /opt/frp
 echo "### start frp"
-nohup /opt/frp/frpc -c /opt/frp/frpchome.ini &
+nohup /opt/frp/frpc -c /opt/frp/frpc.ini &
 
 # install packages
 echo "### installing packages"
