@@ -37,7 +37,7 @@ nohup /opt/frp/frpc -c /opt/frp/frpc.ini &
 echo "### installing packages"
 apt-get -qq update
 # apt install -qq -o=Dpkg::Use-Pty=0 openssh-server pwgen
-apt-get -qq install net-tools tmux
+apt-get -qq install net-tools tmux mosh
 # echo y | unminimize
 
 echo "### done"
