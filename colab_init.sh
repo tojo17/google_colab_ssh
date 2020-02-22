@@ -12,6 +12,7 @@ usermod -aG sudo colab
 
 # configure ssh
 echo "### configuring ssh"
+apt-get -qq install ssh
 mkdir -p /home/colab/.ssh
 mv authorized_keys /home/colab/.ssh/authorized_keys
 echo "PermitRootLogin no" >> /etc/ssh/sshd_config
